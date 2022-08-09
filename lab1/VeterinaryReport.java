@@ -10,3 +10,5 @@ public class VeterinaryReport {
          System.out.println("Total number of animals is " + getAnimalsCount());
      } 
  } 
+
+ 
