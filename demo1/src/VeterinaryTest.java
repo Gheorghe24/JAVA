@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class VeterinaryTest {
     public static void main(String[] args) {
         VeterinaryReport vr = new VeterinaryReport();
@@ -8,8 +10,10 @@ public class VeterinaryTest {
         vr2.setDogs(4);
         vr2.setCats(2);
 
-        vr2.displayStatistics();
-
-        System.out.println("mi0000000i");
+        VeterinaryReport [] reports = new VeterinaryReport[2];
+        reports[0] = vr;
+        reports[1] = vr2;
+        System.out.println(22);
+        System.out.println(Arrays.toString(reports));
     }
 }

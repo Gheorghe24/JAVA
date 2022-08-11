@@ -21,4 +21,12 @@ public class VeterinaryReport {
     public void displayStatistics() {
         System.out.println("Total number of animals is " + getAnimalsCount());
     }
+
+    @Override
+    public String toString() {
+        return "VeterinaryReport{" +
+                "dogs=" + dogs +
+                ", cats=" + cats +
+                '}';
+    }
 }
