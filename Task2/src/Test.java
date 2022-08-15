@@ -13,7 +13,7 @@ public class Test {
         System.out.println(course);
 
         task2(course, year);
-//        task3();
+        task3();
     }
 
     /**
@@ -59,9 +59,11 @@ public class Test {
         student1.setYear(4);
 
         Student student2 = new Student();
-        student2.setName("Gicu");
-        student2.setYear(2);
+        student2.setName("Ionut");
+        student2.setYear(4);
 
         System.out.println(student1.equals(student2));
     }
+
+
 }
