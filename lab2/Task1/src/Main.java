@@ -1,4 +1,4 @@
-public class Complex {
+class Complex {
     private int real, imaginary;
 
     public Complex(int r, int im) {
@@ -37,8 +37,20 @@ public class Complex {
     }
 
     public void showNumber() {
-        System.out.println("Numar: " + real + " " + imaginary + "i");
+        System.out.println("Numarul : " + real + " + " + imaginary + "i\n");
     }
 
+}
 
+public class Main {
+    public static void main (String[] args) {
+        Complex nr1 = new Complex();
+        Complex nr2 = new Complex(10, 2);
+        Complex nr3 = new Complex(nr2);
+        nr3.setReal(22);
+
+        nr1.showNumber();
+        nr2.showNumber();
+        nr3.showNumber();
+    }
 }
