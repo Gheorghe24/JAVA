@@ -1,6 +1,10 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-
+        int[] intArray = new int[]{ 1,2,3,4,5,6,7,8,9,10 };
+        Poligon myPoli = new Poligon(intArray);
+        myPoli.poligonShow();
     }
 }
 
@@ -18,23 +22,29 @@ class Point {
     }
 
     public void Show() {
-        System.out.println("(" + x + "," + y + ")");
+        System.out.println("(" + x + "," + y + ")\n");
     }
 }
 
 class Poligon {
-    Point[] arr;
+    private Point[] arr;
     public Poligon(int n) {
-        arr = new Point[n];
+        Point[] arr = new Point[n];
+        this.arr = arr;
     }
 
     public Poligon(int [] array) {
-        Poligon p1 = new Poligon(array.length/2);
+        this(array.length/2);
         for(int i = 0; i< array.length/2; i++) {
-            arr[i].changeCoords(array[2*i],array[2*i+1]);
+            this.arr[i] = new Point(array[2*i],array[2*i+1]);
         }
     }
 
+    public void poligonShow() {
+        for(int i = 0; i< arr.length; i++) {
+                arr[i].Show();
+        }
+    }
 
 
 }
