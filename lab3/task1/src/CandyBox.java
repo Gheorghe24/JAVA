@@ -30,6 +30,14 @@ class Lindt extends CandyBox {
     float getVolume(){
         return lenght * width * height;
     }
+
+    @Override
+    public String toString() {
+        return "CandyBox{" +
+                "flavor='" + '\'' +
+                ", origin='" + '\'' +
+                '}';
+    }
 }
 
 class Baravelli extends CandyBox {
