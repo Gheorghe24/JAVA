@@ -6,10 +6,11 @@ import lab4.people.Teacher;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 
 public class Database {
-    private List<Student> students = new ArrayList<>();
-    private List<Teacher> teachers = new ArrayList<>();
+    private final List<Student> students = new ArrayList<>();
+    private final List<Teacher> teachers = new ArrayList<>();
 
     // TODO: make it Singleton
 
@@ -32,18 +33,21 @@ public class Database {
     }
 
     public List<Student> findAllStudents() {
-        // TODO
-        return null;
+        return students;
     }
 
     public List<Teacher> findAllTeachers() {
-        // TODO
-        return null;
+        return teachers;
     }
 
     public List<Student> getStudentsBySubject(String subject) {
-        // TODO
-        return null;
+        List<Student> students_sub = new ArrayList<>();
+        for (Student temp: students) {
+            if(temp.getSubjects().containsKey(subject)) {
+                students_sub.add(temp);
+            }
+        }
+        return students_sub;
     }
 
     public List<Student> getStudentsByAverageGrade() {

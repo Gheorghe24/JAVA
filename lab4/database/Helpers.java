@@ -11,7 +11,7 @@ import static lab4.database.Subjects.*;
 public class Helpers {
     public static void addTeachers() {
         // decomment the below lines
-        /*
+/*
         Database.getDatabase().addTeachers(Arrays.asList(
             new Teacher("Alex", "Olteanu",
                 Arrays.asList(OBJECT_ORIENTED_PROGRAMMING, DATA_STRUCTURES)),
@@ -109,6 +109,8 @@ public class Helpers {
                     COMPUTER_SYSTEMS_ARCHITECTURE, 5,
                     LOGIC_DESIGN, 7))
         ));
-         */
+*/
     }
+
+
 }

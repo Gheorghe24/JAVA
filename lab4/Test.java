@@ -8,7 +8,7 @@ import static lab4.database.Subjects.*;
 public class Test {
     public static void main(String[] args) {
         // uncomment these lines when testing the implementation
-        /*
+    /*
         // adding people to data base
         Helpers.addTeachers();
         Helpers.addStudents();
@@ -55,6 +55,6 @@ public class Test {
 
         // checking number of instances
         System.out.println(Database.getNumberOfInstances());
-         */
+*/
     }
 }
