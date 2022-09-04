@@ -72,6 +72,10 @@ class Lindt extends CandyBox {
         this.height = height;
     }
 
+    public void printLindtDim(){
+        System.out.println("lenght " + this.lenght + " height " + this.height + " width " + this.width);
+    }
+
     @Override
     public String toString() {
         return "The " + super.getOrigin() + " " + super.getFlavor() + " has volume " + getVolume();
@@ -90,6 +94,10 @@ class Baravelli extends CandyBox {
     public Baravelli(float radius, float height) {
         this.radius = radius;
         this.height = height;
+    }
+
+    public void printBaravelliDim(){
+        System.out.println("radius " + this.radius + " " + "height " + this.height);
     }
 
     @Override
@@ -118,6 +126,10 @@ class ChocAmor extends CandyBox {
     @Override
     public String toString() {
         return "The " + super.getOrigin() + " " + super.getFlavor() + " has volume " + getVolume();
+    }
+
+    public void printChocAmorDim(){
+        System.out.println("lenght " + this.lenght);
     }
 
     @Override
