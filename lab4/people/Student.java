@@ -19,7 +19,6 @@ public class Student {
         this.subjects = subjects;
     }
 
-    // TODO: copy constructor
     public Student(Student student) {
         this.firstName = student.firstName;
         this.lastName = student.lastName;

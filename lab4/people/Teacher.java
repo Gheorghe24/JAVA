@@ -1,5 +1,6 @@
 package lab4.people;
 
+import com.sun.org.apache.bcel.internal.generic.NEW;
 import lab4.database.Database;
 
 import java.util.List;
@@ -52,32 +53,27 @@ public class Teacher {
     }
 
     public List<Teacher> getAllTeachers() {
-        // TODO
-        return null;
+
+        return Database.getDatabase().findAllTeachers();
     }
 
     public List<Teacher> getTeachersBySubject(String subject) {
-        // TODO
-        return null;
+        return Database.getDatabase().findTeachersBySubject(subject);
     }
 
     public List<Student> getAllStudents() {
-        // TODO
-        return null;
+        return Database.getDatabase().findAllStudents();
     }
 
     public List<Student> getStudentsBySubject(String subject) {
-        // TODO
-        return null;
+        return Database.getDatabase().getStudentsBySubject(subject);
     }
 
     public List<Student> getStudentsByAverageGrade() {
-        // TODO
-        return null;
+        return Database.getDatabase().getStudentsByAverageGrade();
     }
 
     public List<Student> getStudentsByGradeForSubject(String subject) {
-        // TODO
-        return null;
+        return Database.getDatabase().getStudentsByGradeForSubject(subject);
     }
 }

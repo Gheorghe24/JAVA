@@ -12,11 +12,20 @@ public class Database {
     private final List<Student> students = new ArrayList<>();
     private final List<Teacher> teachers = new ArrayList<>();
 
-    // TODO: make it Singleton
+    private static Database instance = null;
+    private static int instanceCount = 0;
+    private Database(){
+        instanceCount++;
+    }
 
+    public static Database getDatabase(){
+        if(instance == null){
+            instance = new Database();
+        }
+        return instance;
+    }
     public static int getNumberOfInstances() {
-        // TODO
-        return 0;
+        return instanceCount;
     }
 
     public void addTeachers(List<Teacher> teachers) {
@@ -28,8 +37,13 @@ public class Database {
     }
 
     public List<Teacher> findTeachersBySubject(String subject) {
-        // TODO
-        return null;
+        List<Teacher> teachers_sub = new ArrayList<>();
+        for (Teacher temp: teachers) {
+            if(temp.getSubjects().contains(subject)) {
+                teachers_sub.add(temp);
+            }
+        }
+        return teachers_sub;
     }
 
     public List<Student> findAllStudents() {
@@ -51,12 +65,29 @@ public class Database {
     }
 
     public List<Student> getStudentsByAverageGrade() {
-        // TODO
-        return null;
+        students.sort(new Comparator<Student>() {
+
+            public int compare(Student o1, Student o2) {
+                if(o1.averageGrade() > o2.averageGrade()){
+                    return 1;
+                }
+                return  0;
+            }
+        });
+        return students;
     }
 
     public List<Student> getStudentsByGradeForSubject(String subject) {
-        // TODO
-        return null;
+        List<Student> students_sub = getStudentsBySubject(subject);
+        students_sub.sort(new Comparator<Student>() {
+
+            public int compare(Student o1, Student o2) {
+                if(o1.averageGrade() > o2.averageGrade()){
+                    return 1;
+                }
+                return  0;
+            }
+        });
+        return students_sub;
     }
 }
