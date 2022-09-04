@@ -46,7 +46,7 @@ public class Helpers {
             new Student(
                 "Florin",
                 "Mihalache",
-                Map.of(
+                    Map.of(
                     PROGRAMMING_PARADIGMS,10,
                     OBJECT_ORIENTED_PROGRAMMING, 9,
                     PARALLEL_AND_DISTRIBUTED_ALGORITHMS, 10,
