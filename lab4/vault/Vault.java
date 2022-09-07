@@ -5,7 +5,7 @@ public class Vault {
 	private static final int maxTries = 3;
 
 	public boolean checkPassword(String password) {
-		String hidden = password.substring(4, 11);
+		String hidden = password.substring(4, 12);
 		if (hidden.equals("POO#lab4")) {
 			System.out.println("Access granted!");
 			return true;
