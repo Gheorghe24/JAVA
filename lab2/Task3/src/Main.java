@@ -5,6 +5,8 @@ public class Main {
         int[] intArray = new int[]{ 1,2,3,4,5,6,7,8,9,10 };
         Poligon myPoli = new Poligon(intArray);
         myPoli.poligonShow();
+        Point uu = new Point(1,2);
+
     }
 }
 

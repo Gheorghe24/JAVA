@@ -12,7 +12,6 @@ public class Test {
         Helpers.addTeachers();
         Helpers.addStudents();
 
-        // tests
         var testStudent = Database.getDatabase().findAllStudents().get(0);
         var testTeacher = Database.getDatabase().findAllTeachers().get(0);
 
