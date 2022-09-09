@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
@@ -47,8 +48,12 @@ public class GridExample extends Application {
         Button loginButton = new Button();
         loginButton.setText("Log In");
         GridPane.setConstraints(loginButton, 1, 2);
+        loginButton.setOnAction(e-> System.out.println(nameField.getText() + " " + passField.getText()));
 
-        grid.getChildren().addAll(nameLabel,nameField, passLabel, passField, loginButton);
+        CheckBox box = new CheckBox("select me");
+        GridPane.setConstraints(box, 0, 2);
+
+        grid.getChildren().addAll(nameLabel,nameField, passLabel, passField, loginButton, box);
 
         Scene scene = new Scene(grid, 300, 200);
         window.setScene(scene);
