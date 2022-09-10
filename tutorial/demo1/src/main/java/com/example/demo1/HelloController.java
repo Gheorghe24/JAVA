@@ -10,8 +10,6 @@ public class HelloController {
     public Label label;
     public TextField t1, t2;
 
-
-
     public void OnClick() {
         label.setText("Sum is : " +( Integer.parseInt(t1.getText()) + Integer.parseInt(t2.getText())));
     }
